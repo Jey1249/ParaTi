@@ -14,6 +14,52 @@ body{
     /* padding-top: -30; */
 }
 
+/* Dispositivos muy pequeños (ej. iPhone 5/SE) */
+@media screen and (max-width: 320px) {
+    .greetings {
+        font-size: 2.5rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+    }
+    
+    #lyrics {
+        font-size: 14px;
+        margin-bottom: 40%;
+    }
+}
+
+/* Tablets pequeñas y móviles grandes */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    .greetings {
+        font-size: 5rem;
+    }
+    
+    #lyrics {
+        font-size: 20px;
+        margin-bottom: 25%;
+    }
+}
+
+/* Orientación horizontal */
+@media screen and (max-height: 500px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+    
+    .greetings {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    #lyrics {
+        margin-bottom: 15%;
+    }
+}
+
 .botones{
     padding: 9px;
     border-radius: 80px;
@@ -21,27 +67,26 @@ body{
     border: none;
 }
 
-.botones a{
-    background-color: #8134ed;
-    padding: 9px;
-    border-radius: 80px;
-    -webkit-border-radius: 80px;
-    -moz-border-radius: 80px;
-    -ms-border-radius: 80px;
-    -o-border-radius: 80px;
-
+.botones a {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    display: inline-block;
+    min-width: 150px;
+    text-align: center;
 }
 
 .botones a:focus{
     background-color: rgb(50, 194, 194);
 }
 
-.greetings{
-    font-size: 7rem;
+.greetings {
+    font-size: 3.5rem; /* Reducido de 7rem */
     font-weight: 900;
+    margin-bottom: 1rem;
 }
-.greetings > span{
+.greetings > span {
     animation: glow 2.5s ease-in-out infinite;
+    will-change: transform, opacity; /* Mejora de rendimiento */
 }
 @keyframes glow{
     0%, 100%{
@@ -72,10 +117,16 @@ body{
     animation-delay: 1.2s;
 }
 
-.description{
-    margin-top: 50px;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+.description {
+    margin-top: 20px; /* Reducido de 50px */
+    font-size: 1.2rem; /* Reducido de 1.5rem */
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.button {
+    margin-top: 20px;
 }
 
 .button a{
