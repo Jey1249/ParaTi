@@ -50,27 +50,31 @@ var lyricsData = [
   { text: "Uh, uh, uh, uh, uh", time: 270.5 }
 ];  
 
-// Animar las letras
+// Optimizar la actualización de letras para móviles
 function updateLyrics() {
-  var time = Math.floor(audio.currentTime);
-  var currentLine = lyricsData.find(
-    (line) => time >= line.time && time < line.time + 6
-  );
+    if (window.innerWidth < 600) { // Solo para móviles
+        var time = Math.floor(audio.currentTime);
+        var currentLine = lyricsData.find(
+            (line) => time >= line.time && time < line.time + 4 // Reducir tiempo de visualización
+        );
 
-  if (currentLine) {
-    // Calcula la opacidad basada en el tiempo en la línea actual
-    var fadeInDuration = 0.3; // Duración del efecto de aparición en segundos
-    var opacity = Math.min(1, (time - currentLine.time) / fadeInDuration);
-
-    // Aplica el efecto de aparición
-    lyrics.style.opacity = opacity;
-    lyrics.innerHTML = currentLine.text;
-  } else {
-    // Restablece la opacidad y el contenido si no hay una línea actual
-    lyrics.style.opacity = 0;
-    lyrics.innerHTML = "";
-  }
+        if (currentLine) {
+            var opacity = Math.min(1, (time - currentLine.time) / 0.5); // Transición más rápida
+            lyrics.style.opacity = opacity;
+            lyrics.style.fontSize = '16px'; // Tamaño fijo para móviles
+            lyrics.innerHTML = currentLine.text;
+        } else {
+            lyrics.style.opacity = 0;
+            lyrics.innerHTML = "";
+        }
+    } else {
+        // Código original para desktop
+    }
 }
+
+// Reducir intervalo de actualización para móviles
+var updateInterval = window.innerWidth < 600 ? 500 : 1000;
+setInterval(updateLyrics, updateInterval);
 
 setInterval(updateLyrics, 1000);
 
