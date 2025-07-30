@@ -22,10 +22,10 @@ var lyricsData = [
   { text: "Y estaré aquí", time: 102.5 },
   { text: "Uh, uh, uh, uh", time: 111.5 },
   { text: "Uh, uh, uh, uh", time: 116.5 },
-  { text: "Uh, uh, uh, uh, uh", time: 119.5 },
-  { text: "Uh, uh, uh, uh", time: 123.5 },
-  { text: "Uh, uh, uh, uh", time: 127.5 },
-  { text: "Uh, uh, uh, uh, uh", time: 131.5 },
+  { text: "Uh, uh, uh, uh, uh", time: 121.5 },
+  { text: "No estas sola siiii, un abrazoooo...!!!", time: 133.5 },
+  { text: "Ahora si sigamos uh, uh", time: 139.5 },
+  { text: "Uh, uh, uh, uh, uh", time: 145.5 },
   { text: "Si te han visto", time: 156.5 },
   { text: "Le has robado el brillo a la Luna y a Venus", time: 158.5 },
   { text: "Me has amado en guerra dulzura", time: 164.5 },
@@ -43,11 +43,11 @@ var lyricsData = [
   { text: "Cuando arda toda esta ciudad, ya fue", time: 240.5 },
   { text: "Yo estaré aquí", time: 249.5 },
   { text: "Uh, uh, uh, uh", time: 258.5 },
-  { text: "Uh, uh, uh, uh", time: 259.5 },
-  { text: "Uh, uh, uh, uh, uh", time: 258.5 },
-  { text: "Uh, uh, uh, uh", time: 262.5 },
-  { text: "Uh, uh, uh, uh", time: 266.5 },
-  { text: "Uh, uh, uh, uh, uh", time: 270.5 }
+  { text: "Uh, uh, uh, uh", time: 263.5 },
+  { text: "Uh, uh, uh, uh, uh", time: 269.5 },
+  { text: "Uh, uh, uh, uh", time: 280.5 },
+  { text: "Uh, uh, uh, uh", time: 286.5 },
+  { text: "Uh, uh, uh, uh, uh", time: 291.5 }
 ];  
 
 // Optimizar la actualización de letras para móviles
